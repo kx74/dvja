@@ -33,10 +33,10 @@ pipeline {
         cleanWs()
       }
     }
-    post {
+  }
+  post {
     always {
         archiveArtifacts artifacts: 'zap-report.html', fingerprint: true
     }
-}
   }
 }
