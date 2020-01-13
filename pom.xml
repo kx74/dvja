@@ -156,6 +156,21 @@
                 </configuration>
             </plugin>
             <plugin>
+               <!-- Build an executable JAR -->
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-jar-plugin</artifactId>
+               <version>3.1.0</version>
+               <configuration>
+                 <archive>
+                   <manifest>
+                     <addClasspath>true</addClasspath>
+                     <classpathPrefix>lib/</classpathPrefix>
+                     <mainClass>com.appsecco.dvja</mainClass>
+                   </manifest>
+                 </archive>
+               </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.3.0.M2</version>
