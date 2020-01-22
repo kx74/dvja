@@ -34,6 +34,7 @@ public class ProductService {
     }
 
     public Product find(int id) {
+        logger.debug("product Id: " + this.id);
         return entityManager.find(Product.class, id);
     }
 
